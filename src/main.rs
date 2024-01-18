@@ -1,6 +1,7 @@
 use serde::Serialize;
 use std::fs;
 use std::path::{Path, PathBuf};
+use std::io;
 
 #[derive(Serialize)]
 struct FileNode {
@@ -56,6 +57,40 @@ fn print_file_structure(node: &FileNode, depth: usize) {
     }
 }
 
+fn copy_main_to_output() -> io::Result<()> {
+    let main_folder = Path::new("main");
+    let output_folder = Path::new("output");
+
+    // Create the output directory if it doesn't exist
+    if !output_folder.exists() {
+        fs::create_dir_all(&output_folder)?;
+    }
+
+    // Iterate over entries in the 'main' folder
+    for entry in fs::read_dir(&main_folder)? {
+        let entry = entry?;
+        let entry_path = entry.path();
+
+        // Use unwrap_or_else to handle StripPrefixError
+        let relative_path = entry_path.strip_prefix(&main_folder)
+            .unwrap_or_else(|e| panic!("Error stripping prefix: {:?}", e));
+
+        // Create the corresponding path in the 'output' folder
+        let output_path = output_folder.join(relative_path);
+
+        if entry_path.is_file() {
+            // Copy files
+            fs::copy(&entry_path, &output_path)?;
+        } else if entry_path.is_dir() {
+            // Create corresponding directory in 'output'
+            fs::create_dir_all(&output_path)?;
+        }
+        // Ignore other file types (symlinks, etc.)
+    }
+
+    Ok(())
+}
+
 fn main() {
     let data_folder = Path::new("data");
 
@@ -83,9 +118,14 @@ fn main() {
             }
 
             // Print the file structure
-            println!("File Structure:");
-            print_file_structure(&file_structure, 0);
+            //println!("File Structure:");
+            //print_file_structure(&file_structure, 0);
         }
         Err(err) => eprintln!("Error: {:?}", err),
+    }
+    
+    match copy_main_to_output() {
+        Ok(()) => println!("Files copied successfully."),
+        Err(err) => eprintln!("Error copying files: {:?}", err),
     }
 }
