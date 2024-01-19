@@ -7,7 +7,7 @@
     <link rel="preload" href="main.css" as="style">
     <link rel="preload" href="main.js" as="script">
     <link rel="stylesheet" href="main.css"/>
-    <script src="main.js"></script>
+    
 </head>
 <body>
     <header>
@@ -19,8 +19,9 @@
         <div id="filetree"></div>
       </div>
       <div id="RHS">
+        <div id="grid2">
           <div id="fileheader">
-            <h2 id="fileh2"></h2>
+            <h3 id="fileh3"></h3>
             <input type="checkbox" id="readbox" onchange="markRead()">
             <label for="readbox">Mark as read</label>
             
@@ -33,12 +34,35 @@
             <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
             <label for="reviewclearbox">Clear review files</label>
 
-            <button id="downloadButton">Download</button> 
+            <br><br>
+
+            <button id="downloadButton" onclick="download()">Open/Download</button>
+
+            <br><br>
+
+            <li id="actualli">Depends on how your browser treats the document file.</li>
           </div>
-          <div id="viewer">
-              <iframe src="" width="100%" height="100%"></iframe>
+          <div id="col2">
+            <h1 id="timer">00:00:00</h1>
+            <button onclick="addHour()">+1 hour</button>
+            <button onclick="addThirty()">+30 minutes</button>
+            <button onclick="addTen()">+10 minutes</button>
+            <button onclick="addMin()">+1 minute</button>
+            <br>
+            <button onclick="startCountdown(5)">Start Countdown</button>
+            <button onclick="stopCountdown()">Stop Countdown</button>
+            <button onclick="resetCountdown()">Reset Countdown</button>
           </div>
+          <div id="col3">
+           <h3>File notes:</h3>
+            <textarea type="text" id="notes"></textarea>
+          </div>
+        </div>
+        <div id="viewer">
+            <iframe src="" width="100%" height="100%"></iframe>
+        </div>
       </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

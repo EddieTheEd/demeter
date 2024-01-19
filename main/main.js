@@ -3,6 +3,9 @@ const readData = localStorage.getItem('read');
 readFilePaths = readData ? JSON.parse(readData) : [];
 const reviewData = localStorage.getItem('review');
 reviewFilePaths = reviewData ? JSON.parse(reviewData) : [];
+const writeData = localStorage.getItem('write');
+writeFilePaths = writeData ? JSON.parse(writeData) : {};
+textbox = document.querySelector('textarea');
 
 async function readJSONFile() {
   try {
@@ -63,12 +66,18 @@ function loadFile(path) {
   } else {
     document.getElementById("reviewbox").checked = false;
   }
+  if (path in writeFilePaths){
+    textbox.value = writeFilePaths[path];
+  } else {
+    textbox.value = '';
+  }
+
 
   const absoluteURL = window.location.origin + '/' + path;
   //window.location.href = absoluteURL;
   if (/\.(pdf|docx?|txt)/i.test(path)) {
     document.getElementById("viewer").children[0].src = `https://docs.google.com/gview?url=${absoluteURL}&embedded=true`.replace("http://127.0.0.1:8080/", "https://demeter.toomwn.xyz/"); //for live-server, obviously google cant access something being served locally, so this assumes it exists on the website
-    document.getElementById("fileh2").innerHTML = path.split('/').pop().replace(".pdf", "").replace(".PDF", "").replace(".docx", "").replace(".doc", "").replace(".txt", "");
+    document.getElementById("fileh3").innerHTML = path.split('/').pop().replace(".pdf", "").replace(".PDF", "").replace(".docx", "").replace(".doc", "").replace(".txt", "");
     currentPath = path;
   }
   else {
@@ -95,6 +104,16 @@ function markRead() {
     localStorage.setItem('read', JSON.stringify(readFilePaths));
     reloadTree(); 
   }
+}
+
+
+textbox.addEventListener('input', function() {
+  writeFilePaths[currentPath] = textbox.value;
+  localStorage.setItem('write', JSON.stringify(writeFilePaths));
+});
+
+function download() {
+  window.open(currentPath, '_blank');
 }
 
 function markReview() {
@@ -145,7 +164,96 @@ function clearReview() {
 
 }
 
-const downloadButton = document.getElementById('downloadButton');
-downloadButton.addEventListener('click', () => {
-  window.open(currentPath, '_blank');
-});
+let countdownInterval;
+let countdownSeconds;
+let duration = 0;
+let stopped = false;
+let setCountdown = 0;
+
+function addHour() {
+  duration = duration + 3600;
+  countdownSeconds = duration;
+  updateCountdown();
+}
+
+function addThirty() {
+  duration = duration + 1800;
+  countdownSeconds = duration;
+  updateCountdown();
+}
+
+function addTen() {
+  duration = duration + 600;
+  countdownSeconds = duration;
+  updateCountdown();
+}
+
+function addMin() {
+  duration = duration + 60;
+  countdownSeconds = duration;
+  updateCountdown();
+}
+
+function startCountdown() {
+  if (!stopped) {
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+    }
+
+    countdownSeconds = duration;
+    updateCountdown();
+
+    countdownInterval = setInterval(function () {
+      if (countdownSeconds <= 0) {
+        clearInterval(countdownInterval);
+        alert("Countdown finished!");
+      } else {
+        countdownSeconds--;
+        updateCountdown();
+      }
+    }, 1000);
+  } else {
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+    }
+
+    updateCountdown();
+
+    countdownInterval = setInterval(function () {
+      if (countdownSeconds <= 0) {
+        clearInterval(countdownInterval);
+        alert("Countdown finished!");
+      } else {
+        countdownSeconds--;
+        updateCountdown();
+      }
+    }, 1000);
+  }
+}
+
+function stopCountdown() {
+  setCountdown = countdownSeconds;
+  clearInterval(countdownInterval);
+  stopped = true;
+}
+
+function resetCountdown() {
+  stopCountdown();
+  countdownSeconds = 0;
+  setCountdown = 0;
+  duration = 0;
+  updateCountdown();
+  stopped = false;
+}
+
+function updateCountdown() {
+  const hours = Math.floor(countdownSeconds / 3600);
+  const minutes = Math.floor((countdownSeconds % 3600) / 60);
+  const seconds = countdownSeconds % 60;
+  const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+  document.getElementById('timer').innerText = formattedTime;
+}
+
+function padZero(number) {
+  return number < 10 ? `0${number}` : number;
+}

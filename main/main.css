@@ -42,6 +42,10 @@ li {
   list-style-type: none;
 }
 
+#actualli {
+  list-style-type: square;
+}
+
 #page {
   display: grid;
   grid-template-columns: 20fr 80fr;
@@ -49,11 +53,25 @@ li {
   grid-column-gap: 2%;
 }
 
+#grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2%;
+}
+
+
 #LHS {
   height: 80vh;
 }
 
 #fileheader {
+  height: 13.5vh;
+  margin-bottom: 1.5vh;
+  overflow: auto;
+}
+
+#col2 {
   height: 13.5vh;
   margin-bottom: 1.5vh;
   overflow: auto;
@@ -67,4 +85,13 @@ iframe {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+textarea {
+  width: 100%;
+  height: 6.75vh;
+  border: 2px solid #f2f2f2;
+  border-radius: 4px;
+  background-color: #11121d;
+  color: #f2f2f2;
 }
