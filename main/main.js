@@ -44,4 +44,5 @@ function loadFile(path) {
   const absoluteURL = window.location.origin + '/' + path;
   //window.location.href = absoluteURL;
   document.getElementById("viewer").children[0].src = `https://docs.google.com/gview?url=${absoluteURL}&embedded=true`;
+  document.getElementById("fileh2").innerHTML = path.replace(".pdf", "").replace(".PDF", "").replace(".doc", "").replace(".docx", "")
 }
