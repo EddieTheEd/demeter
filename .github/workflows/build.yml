@@ -1,4 +1,4 @@
-name: Build Blaze
+name: Build
 
 on:
   push:
@@ -44,14 +44,8 @@ jobs:
       - name: Custom Domain
         run: |
           touch 'CNAME'
-          echo "blaze.toomwn.xyz" > 'CNAME'
+          echo "demeter.toomwn.xyz" > 'CNAME'
           
-          # replace "blaze.toomwn.xyz" with your custom name
-          # delete this part of the workflow if you don't have a custom domain
-      - name: Pagefind
-        run: |
-          npx pagefind --site .
-
       - name: Update master
         run: |
           git checkout -b master
