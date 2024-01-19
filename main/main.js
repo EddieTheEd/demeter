@@ -144,3 +144,8 @@ function clearReview() {
   document.getElementById("reviewbox").checked = false;
 
 }
+
+const downloadButton = document.getElementById('downloadButton');
+downloadButton.addEventListener('click', () => {
+  window.open(currentPath, '_blank');
+});
