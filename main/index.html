@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+    <title>Demeter</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="main.css" as="style">
@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>
-      <h1>Banking</h1>
-      <p>Reading documents made easy!</p>
+      <h1>Demeter</h1>
+      <p>Load document files (pdf, docx) in one page, and mark visited files.</p>
     </header>
     <div id="page">
       <div id="LHS">
@@ -21,6 +21,17 @@
       <div id="RHS">
           <div id="fileheader">
             <h2 id="fileh2"></h2>
+            <input type="checkbox" id="readbox" onchange="markRead()">
+            <label for="readbox">Mark as read</label>
+            
+            <input type="checkbox" id="reviewbox" onchange="markReview()">
+            <label for="reviewbox">Mark for review</label> 
+            
+            <input type="checkbox" id="readclearbox" onchange="clearRead()">
+            <label for="readclearbox">Clear read files</label>
+            
+            <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
+            <label for="reviewclearbox">Clear review files</label>
           </div>
           <div id="viewer">
               <iframe src="" width="100%" height="100%"></iframe>
