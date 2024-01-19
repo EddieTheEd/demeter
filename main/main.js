@@ -68,7 +68,7 @@ function loadFile(path) {
   //window.location.href = absoluteURL;
   if (/\.(pdf|docx?|txt)/i.test(path)) {
     document.getElementById("viewer").children[0].src = `https://docs.google.com/gview?url=${absoluteURL}&embedded=true`.replace("http://127.0.0.1:8080/", "https://demeter.toomwn.xyz/"); //for live-server, obviously google cant access something being served locally, so this assumes it exists on the website
-    document.getElementById("fileh2").innerHTML = path.split('/').pop().replace(".pdf", "").replace(".PDF", "").replace(".doc", "").replace(".docx", "").replace(".txt", "");
+    document.getElementById("fileh2").innerHTML = path.split('/').pop().replace(".pdf", "").replace(".PDF", "").replace(".docx", "").replace(".doc", "").replace(".txt", "");
     currentPath = path;
   }
   else {
