@@ -1,0 +1,52 @@
+html {
+  background-color: #11121d;
+  color: #f2f2f2;
+}
+
+#LHS, #RHS {
+  border: solid #f2f2f2;
+  padding: 1%;
+}
+
+#filetree {
+  max-height: 80vh;
+  max-width: 20vw;
+  overflow: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+#page {
+  display: grid;
+  grid-template-columns: 20fr 80fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2%;
+}
+
+#LHS {
+  height: 80vh;
+}
+
+#fileheader {
+  height: 13.5vh;
+  margin-bottom: 1.5vh;
+  overflow: auto;
+}
+
+#viewer {
+  height: 65vh;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

@@ -57,8 +57,8 @@ fn print_file_structure(node: &FileNode, depth: usize) {
     }
 }
 
-fn copy_main_to_output() -> io::Result<()> {
-    let main_folder = Path::new("main");
+fn copy_main_to_output(path: &str) -> io::Result<()> {
+    let main_folder = Path::new(path);
     let output_folder = Path::new("output");
 
     // Create the output directory if it doesn't exist
@@ -84,6 +84,59 @@ fn copy_main_to_output() -> io::Result<()> {
         } else if entry_path.is_dir() {
             // Create corresponding directory in 'output'
             fs::create_dir_all(&output_path)?;
+        }
+        // Ignore other file types (symlinks, etc.)
+    }
+
+    Ok(())
+}
+
+fn copy_folder(src: &str) -> io::Result<()> {
+    let src_path = std::path::Path::new(src);
+    let dest_path = std::path::Path::new("output").join(src_path.file_name().unwrap());
+
+    // Create destination directory
+    fs::create_dir_all(&dest_path)?;
+
+    // Iterate over entries in the source folder
+    for entry in fs::read_dir(&src_path)? {
+        let entry = entry?;
+        let entry_path = entry.path();
+
+        // Create the corresponding path in the destination folder
+        let dest_entry_path = dest_path.join(entry_path.file_name().unwrap());
+
+        if entry_path.is_file() {
+            // Copy files
+            fs::copy(&entry_path, &dest_entry_path)?;
+        } else if entry_path.is_dir() {
+            // Copy directories recursively
+            copy_folder_recursive(&entry_path, &dest_entry_path)?;
+        }
+        // Ignore other file types (symlinks, etc.)
+    }
+
+    Ok(())
+}
+
+fn copy_folder_recursive(src: &std::path::Path, dest: &std::path::Path) -> io::Result<()> {
+    // Create destination directory
+    fs::create_dir_all(&dest)?;
+
+    // Iterate over entries in the source folder
+    for entry in fs::read_dir(src)? {
+        let entry = entry?;
+        let entry_path = entry.path();
+
+        // Create the corresponding path in the destination folder
+        let dest_entry_path = dest.join(entry_path.file_name().unwrap());
+
+        if entry_path.is_file() {
+            // Copy files
+            fs::copy(&entry_path, &dest_entry_path)?;
+        } else if entry_path.is_dir() {
+            // Copy directories recursively
+            copy_folder_recursive(&entry_path, &dest_entry_path)?;
         }
         // Ignore other file types (symlinks, etc.)
     }
@@ -124,8 +177,13 @@ fn main() {
         Err(err) => eprintln!("Error: {:?}", err),
     }
     
-    match copy_main_to_output() {
-        Ok(()) => println!("Files copied successfully."),
-        Err(err) => eprintln!("Error copying files: {:?}", err),
+    match copy_main_to_output("main") {
+        Ok(()) => println!("Main files copied successfully."),
+        Err(err) => eprintln!("Error copying main files: {:?}", err),
+    }
+    if let Err(err) = copy_folder("data") {
+        eprintln!("Error: {:?}", err);
+    } else {
+        println!("Folder copied successfully!");
     }
 }

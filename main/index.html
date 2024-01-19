@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
+    <link rel="preload" href="main.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+    <link rel="stylesheet" href="main.css"/>
+    <script src="main.js"></script>
+</head>
+<body>
     <header>
       <h1>Banking</h1>
+      <p>Reading documents made easy!</p>
     </header>
-    <p>For those who want to review files outside of websites</p>
-  
-  </body>
+    <div id="page">
+      <div id="LHS">
+        <div id="filetree"></div>
+      </div>
+      <div id="RHS">
+          <div id="fileheader"></div>
+          <div id="viewer">
+              <iframe src="https://docs.google.com/gview?url=https://ed.toomwn.xyz/assets/2.%20Stoichiometry%20SOLO%20Student%20Objectives%202022.doc&embedded=true" width="100%" height="100%"></iframe>
+          </div>
+      </div>
+    </div>
+</body>
 </html>

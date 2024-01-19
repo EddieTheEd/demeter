@@ -5,4 +5,5 @@ imagine if they let banks like spend ur moneyh like with no restraint and then e
 for pdfs:
 https://github.com/mozilla/pdf.js
 for doc, docx:
-
+balls
+maybe google doc viewer
