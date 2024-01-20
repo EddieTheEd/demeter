@@ -271,6 +271,34 @@ function clearWrite() {
   document.getElementById("notes").value = "";
 }
 
+function toggleOpen(element) {
+  grandparentElement = element.parentElement.parentElement
+  if (grandparentElement.tagName !== 'DIV'){
+    if (grandparentElement.classList.contains("closed-folder")){
+      toggleChildVisibility(grandparentElement)
+    }
+    toggleOpen(grandparentElement)
+  }
+}
+
+function openRead() {
+  readFilePaths.forEach((path) => {
+    xpathExpression = `//*[contains(text(), '${path.split('/').pop()}')]`;
+    element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    toggleOpen(element)
+  });
+  document.getElementById("openreadbox").checked = false;
+}
+
+function openReview() {
+  reviewFilePaths.forEach((path) => {
+    xpathExpression = `//*[contains(text(), '${path.split('/').pop()}')]`;
+    element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    toggleOpen(element)
+  });
+  document.getElementById("openreviewbox").checked = false;
+}
+
 let countdownInterval;
 let countdownSeconds;
 let duration = 0;
