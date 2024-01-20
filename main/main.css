@@ -58,6 +58,8 @@ li {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 2%;
+  max-height: 12.5vh;
+  margin-bottom: 1vh;
 }
 
 
@@ -65,15 +67,7 @@ li {
   height: 80vh;
 }
 
-#fileheader {
-  height: 13.5vh;
-  margin-bottom: 1.5vh;
-  overflow: auto;
-}
-
-#col2 {
-  height: 13.5vh;
-  margin-bottom: 1.5vh;
+#fileheader, #col2, #col3{ 
   overflow: auto;
 }
 
@@ -88,7 +82,7 @@ iframe {
 }
 
 textarea {
-  width: 100%;
+  width: 90%;
   height: 6.75vh;
   border: 2px solid #f2f2f2;
   border-radius: 4px;
