@@ -48,14 +48,15 @@ function createFileTreeElement(node, depth = 0) {
     listItem.style.color = "#004fb3";
   }
 
-  listItem.addEventListener('click', () => {
+  listItem.addEventListener('click', (event) => {
     loadFile(node.path);
     event.stopPropagation();
   });
 
   if (node.children.length > 0) {
+    const sortedChildren = node.children.slice().sort((a, b) => a.name.localeCompare(b.name));
     const childList = document.createElement('ul');
-    node.children.forEach(child => {
+    sortedChildren.forEach(child => {
       const childElement = createFileTreeElement(child, depth + 1);
       childList.appendChild(childElement);
     });
