@@ -49,12 +49,12 @@ jobs:
 
       - name: Get commit message from main branch
         id: get_commit_message
-        run: echo "${{ steps.get_commit_message.outputs.message }}"
-          
+        run: echo "::set-output name=message::$(git log -1 --pretty=%B)"          
+
       - name: Update master
         run: |
           git checkout -b master
           git add .
-          git commit -m "Working branch update"
+          git commit -m "${{ steps.get_commit_message.outputs.message }}"
           git push origin master --force
 
