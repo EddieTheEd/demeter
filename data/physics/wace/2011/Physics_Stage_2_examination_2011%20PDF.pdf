@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="google-site-verification" content="X9oKmncZ8Y_FPjk68Wln9RhZuepjsEng0txNiGVd7RM" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- Mobile specific -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>School Curriculum and Standards Authority | Page Not Found</title>
+
+        <link rel="icon" href="https://scsa.wa.edu.au/__data/assets/file/0003/49278/favicon.ico?v=0.1.3">
+        <!--[if IE]><link rel="shortcut icon" href="https://scsa.wa.edu.au/__data/assets/file/0003/49278/favicon.ico?v=0.1.3"><![endif]-->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        
+<!-- DC //-->
+
+<!-- AGLS //-->
+<meta name="DCTERMS.title" content="Page Not Found" />
+<meta name="DCTERMS.subject" content="School Curriculum and Standards Authority" />
+<meta name="DCTERMS.description" content="" />
+<meta name="DCTERMS.language" content="en" />
+<meta name="DCTERMS.creator" content="K-10 Outline" />
+<meta name="DCTERMS.publisher" content="K-10 Outline" />
+<meta name="DCTERMS.rights" content="https://scsa.wa.edu.au/copyright" />
+<meta name="DCTERMS.identifier" content="https://scsa.wa.edu.au/page-not-found" />
+<meta name="DCTERMS.coverage" content="(Commonwealth of) Australia" />
+<meta name="DCTERMS.created" content="19-01-2016" />
+<meta name="DCTERMS.modified" content="29-01-2016" />
+<meta name="DCTERMS.available" content="28-01-2016 13:00:58" />
+<meta name="DCTERMS.format" content="" />
+
+<!-- Related Links //-->
+
+<!-- Related //-->
+
+
+        <!-- Styles and Preloaded Scripts -->
+        <link href="https://scsa.wa.edu.au/_design/css/main.css" rel="stylesheet" />
+<link href="https://scsa.wa.edu.au/__data/assets/css_file/0008/628739/new-layout.css" rel="stylesheet" />
+<link href="https://scsa.wa.edu.au/_design/css/collapse.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://scsa.wa.edu.au/_design/css/scsa_homepage.css" rel="stylesheet" />
+<link href="https://scsa.wa.edu.au/_design/css/print_style.css" rel="stylesheet" media="print" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+<link media="all" href="https://scsa.wa.edu.au/__data/assets/css_file/0012/584769/no-js.css" type="text/css" rel="stylesheet"><!-- no js styles -->
+<script src="https://kit.fontawesome.com/426cb039d4.js" crossorigin="anonymous"></script>        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2063067-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google Analytics Print page stats -->
+<script type="text/javascript">
+  var ga  = "UA-2063067-1";
+  var css = document.createElement('style');
+ 
+  if (css && ga != "UA-2063067-1") {
+  var gimg  = "http://ctrlq.org/urchin/?";
+      gimg += "id=" + ga;
+      gimg += "&d=" + document.location.hostname;
+      gimg += "&i=" + document.location.pathname;
+ 
+  var cstr  = "@media print {body:after";
+      cstr += "{content:url(" + gimg + ")}}";
+  var node = document.createTextNode(cstr);
+ 
+  if (css.styleSheet) {
+      css.styleSheet.cssText = node.nodeValue;
+  } else {
+      css.appendChild(node);
+  }
+ 
+  var head = document.getElementsByTagName('head')[0];
+  if (head) {
+      head.appendChild(css);
+  }
+ }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<script>
+    WebFont.load(
+    {
+        custom:
+        {
+            families: ['ready-steady-gov'],
+
+            // urls: ['https://scsa.wa.edu.au/__data/assets/file/0019/973/font_style.css?v=0.1.8']
+            urls: ['https://scsa.wa.edu.au/_design/css/font_style.css']
+        }
+    });
+    WebFont.load(
+    {
+        google:
+        {
+            families: ['Open Sans:600', 'Source Sans Pro:400,600', 'Glegoo:400']
+        }
+    });
+</script>
+<!-- OLDIE wizadry -->
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://scsa.wa.edu.au/__data/assets/js_file/0007/49264/modernizr.min.js"></script>
+        
+        <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-2063067-1', 'scsa.wa.edu.au');
+    ga('send', 'pageview');
+  
+  </script>
+  
+  <!-- Hotjar Tracking Code for www.scsa.wa.edu.au -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1549398,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- End Hotjar Tracking Code for www.scsa.wa.edu.au -->
+    
+<!--
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 24 June 2022 13:09:31
+-->
+
+
+</head>
+    <!--[if lt IE 7]><body class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+    <!--[if IE 7]><body class="no-js lt-ie9 lt-ie8"><![endif]-->
+    <!--[if IE 8]><body class="no-js lt-ie9"><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <body class="no-js">
+        <input type="hidden" name="token" value="ed494338f33feba85d1509977aa824cbb20ba280"  class="sq-form-field" id="token" />        <a name="top"></a>
+        <div class="curr_time"></div>
+    <!--<![endif]-->
+
+    
+            
+
+    <div id="page-wrapper" class="page-container">
+        <!--noindex-->
+        
+
+        <div id="header-container">
+            <div id="pre-header">
+                <div id="pre-header-content" class="wrapper">
+                    <ul>
+                        <li><a href="https://scsa.wa.edu.au/site-map">Site map</a></li>
+                        <li><a href="http://www.scsa.wa.edu.au/accessibility">Accessibility</a></li>
+                        <li><a href="http://www.scsa.wa.edu.au/about-us/contact-details">Contact us</a></li>
+                    </ul>
+                </div><!-- /#pre-header-content -->
+            </div><!-- /.pre-header -->
+            <header id="main-header" class="header" role="banner">
+                <div id="header-content">
+                    <div id="logo">
+
+                        <a href="https://scsa.wa.edu.au/" title="School Curriculum and Standards Authority website">
+                      <img src="https://scsa.wa.edu.au/__data/assets/image/0012/559929/scswagovmain.png" alt="School Curriculum and Standards Authority" />
+                        </a>
+
+                    </div>
+                   <div id="wwa-logo">
+                        <img src="https://scsa.wa.edu.au/__data/assets/image/0011/559928/WW4WA_White235.png" alt="School Curriculum and Standards Authority" />
+                    </div>
+                    <div id="utilities">
+                        <a id="menu-toggle"></a>
+                        <a class="search-trigger"></a>
+                        <form class="search" method="get" action="https://scsa.wa.edu.au/search" data-resturl="">
+                            <fieldset>
+                                <legend>Search</legend>
+                                <label for="search-term">Search this site:</label>
+                                <input type="text" name="query" value="" id="search-term" class="query" placeholder="Search term. e.g. Examinations" />
+                                <button type="submit" value="submit search" id="search-submit-button"> <span class="icon icon-rsgsearch"><span class="button-text">Submit</span></span>
+                                </button>
+                            </fieldset>
+                        </form> <a href="http://wa.gov.au/search" title="WA Government search" class="wa-gov-search">Go to whole of WA Government search</a>
+                    </div>
+                </div>
+
+            </header><!-- /.header -->
+
+            <div id="tab-nav-container">
+                <!-- start tab-nav module -->
+                <div class="nav-content wrapper">
+                    <nav id="tab-main-nav" aria-label="SCSA sites">
+                        <ul class="nav-menu">
+                            <li class="nav-item active"><a href="https://scsa.wa.edu.au">The Authority</a></li>
+                            <li class="nav-item"><a href="http://k10outline.scsa.wa.edu.au/">Kindergarten to Year 10</a></li>
+                            <li class="nav-item"><a href="http://senior-secondary.scsa.wa.edu.au/">Years 11 and 12</a></li>
+                            <li class="nav-item"><a href="https://student.scsa.wa.edu.au">Student Information</a></li>
+                            <li class="nav-item"><a href="https://parent.scsa.wa.edu.au">Parents and Community</a></li>
+                            <li class="nav-item"><a href="https://international-schools.scsa.wa.edu.au">International Schools</a></li>
+                            <li class="nav-item login">
+                            					
+                                    <a href="https://scsa.wa.edu.au/extranet/login"><i class="fa fa-unlock-alt"></i> Extranet Login</a> </li>
+                                
+					                                                        </ul>
+                    </nav>
+                </div>
+                <!-- end tab-nav module -->
+            </div>
+            <!-- /#tab-nav-container -->
+        </div>
+        <!-- /#header-container -->
+
+        														
+            <!-- start secondary-nav -->
+            <div id="nav-container">
+                <!-- start main-nav module -->
+                <div class="nav-content wrapper">
+                    <nav id="main-nav" aria-label="The Authority">
+                        <ul class="nav-menu">
+                            <!-- start mobilenav -->
+                            <li class="nav-item header-mobi" aria-current="page"><a href="/">The Authority</a></li>
+                            <li class="nav-item header-mobi"><a href="https://k10outline.scsa.wa.edu.au/">Kindergarten to Year 10</a></li>
+                            <li class="nav-item header-mobi"><a href="https://senior-secondary.scsa.wa.edu.au/">Years 11 and 12</a></li>
+                            <li class="nav-item header-mobi"><a href="https://student.scsa.wa.edu.au/">Student Information</a></li>
+                            <li class="nav-item header-mobi"><a href="https://parent.scsa.wa.edu.au/">Parents and Community</a></li>
+                            <li class="nav-item header-mobi"><a href="https://international-schools.scsa.wa.edu.au">International Schools</a></li>
+                            <!-- end mobilenav -->
+                            
+                            <li class="nav-item"><a href="https://scsa.wa.edu.au">Home</a></li>
+                                                            <!-- start main-navgroup -->
+                                
+                                <li class="nav-item"><a href="https://scsa.wa.edu.au/about-us" class="sub">About Us</a>
+                                    														                                        <div class="sub-nav">
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/about-scsa">The Authority</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/the-board">The Board</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/committee-membership">Committee Membership</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/principals-forum">Principals Forums</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/curriculum-advisory-committees">Curriculum Advisory Committees</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/strategic-plan">Strategic Plan</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/contact-details">Contact Details</a></h4>
+                                                    														                                                        <ul>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/about-us/contact-details/media-enquiries">Media Enquiries</a></li>
+                                                                                                                    </ul>
+                                                    				                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/about-us/employment">Employment</a></h4>
+                                                    																		                                                </div>
+                                                                                        <!-- /.sub-nav-group -->
+                                        </div>
+                                    				                                </li>
+                                                            <!-- start main-navgroup -->
+                                
+                                <li class="nav-item"><a href="https://scsa.wa.edu.au/publications" class="sub">Publications</a>
+                                    														                                        <div class="sub-nav">
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/activities-schedule">Activities Schedule</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/wace-manual">WACE Manual</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/primary-student-registration-procedures-manual">Primary Student Registration Procedures Manual</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/data-procedures-manual">Data Procedures Manual</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/year-12-information">Year 12 Information Handbook</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/year-10-information">Year 10 Information Handbook</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/circulars">Circulars</a></h4>
+                                                    														                                                        <ul>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/circulars/kto10-circulars">Kto10 Circulars</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/circulars/11to12-circulars">11to12 Circulars</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/circulars/archive">Kto10 Archive</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/circulars/11to12-archive">11to12 Archive</a></li>
+                                                                                                                    </ul>
+                                                    				                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/communication-to-schools">Communications to schools</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/blog">Blog</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/brochures">Brochures</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/reports">Reports</a></h4>
+                                                    														                                                        <ul>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/reports/statistical-reports">Statistical Reports</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/reports/annual-reports">Annual Reports</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/reports/general-reports">General Reports</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/publications/reports/standards-reports">Standards Reports</a></li>
+                                                                                                                    </ul>
+                                                    				                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/past-atar-course-exams">Past ATAR Course Examinations</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/publications/presentations">Presentations</a></h4>
+                                                    																		                                                </div>
+                                                                                        <!-- /.sub-nav-group -->
+                                        </div>
+                                    				                                </li>
+                                                            <!-- start main-navgroup -->
+                                
+                                <li class="nav-item"><a href="https://scsa.wa.edu.au/sirs-and-srms-info" class="sub">SIRS and SRMS Information</a>
+                                    														                                        <div class="sub-nav">
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/sirs-and-srms-info/sirs-information">SIRS Information</a></h4>
+                                                    														                                                        <ul>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/sirs-information/record-formats">Record Formats</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/sirs-information/primary-schools">Primary Schools</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/sirs-information/syllabus-delivery-audit">Syllabus Delivery Audit Uploads</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/sirs-information/est-codes">EST Codes</a></li>
+                                                                                                                    </ul>
+                                                    				                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information">SRMS Information</a></h4>
+                                                    														                                                        <ul>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/role-assignment">Role assignment</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/dashboard">Dashboard</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/eald-applications">ATAR EAL/D eligibility applications</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/wace-language-applications">WACE Language applications</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/year-11-equivalent-studies">Year 11 equivalent studies</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/pre-primary-to-year-10-achievements-collection">Pre-primary to Year 10 Achievements Collection</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/student-portal-frequently-asked-questions">Student Portal - Frequently Asked Questions</a></li>
+                                                                                                                            <li><a href="https://scsa.wa.edu.au/sirs-and-srms-info/srms-information/student-records-management-system-frequently-asked-questions">Student Records Management System - Frequently Asked Questions</a></li>
+                                                                                                                    </ul>
+                                                    				                                                </div>
+                                                                                        <!-- /.sub-nav-group -->
+                                        </div>
+                                    				                                </li>
+                                                            <!-- start main-navgroup -->
+                                
+                                <li class="nav-item"><a href="https://scsa.wa.edu.au/events" class="sub">Events</a>
+                                    														                                        <div class="sub-nav">
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/events/consensus-moderation">Consensus Moderation</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/events/pre-primary-to-year-10-moderation">Pre-primary to Year 10 Moderation</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/events/professional-development-workshops-for-year-12-atar-visual-arts-for-practical-production-marking-and-improving-student-performance">Professional development workshops for Year 12 ATAR Visual Arts for practical (production) marking and improving student performance</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/events/year-11-and-12-assessment-and-moderation-workshops">Year 11 and 12 Assessment and Moderation Workshops </a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/events/consultation-on-proposed-revisions-to-australian-curriculum-languages">Consultation on proposed revisions to Australian Curriculum Languages</a></h4>
+                                                    																		                                                </div>
+                                                                                        <!-- /.sub-nav-group -->
+                                        </div>
+                                    				                                </li>
+                                                            <!-- start main-navgroup -->
+                                
+                                <li class="nav-item"><a href="https://scsa.wa.edu.au/forms" class="sub">Forms</a>
+                                    														                                        <div class="sub-nav">
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/forms/forms">Applications and Order Forms</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/forms/overseas-qualifications">Overseas Qualifications</a></h4>
+                                                    																		                                                </div>
+                                                                                            <div class="sub-nav-group">
+                                                    <h4><a href="https://scsa.wa.edu.au/forms/wace-after-year-12">WACE after Year 12</a></h4>
+                                                    																		                                                </div>
+                                                                                        <!-- /.sub-nav-group -->
+                                        </div>
+                                    				                                </li>
+                                                        <!-- start mobilenav -->
+                            <li class="nav-item header-mobi"><a href="https://scsa.wa.edu.au/site-map">Site map</a></li>
+                            <li class="nav-item header-mobi"><a href="http://www.scsa.wa.edu.au/accessibility">Accessibility</a></li>
+                            <li class="nav-item header-mobi"><a href="http://www.scsa.wa.edu.au/about-us/contact-details">Contact us</a></li>
+                            <li class="nav-item header-mobi"><a href="https://www.scsa.wa.edu.au/extranet/login/_recache">Extranet Login</a></li>
+                            <!-- end mobilenav -->
+                        </ul>
+                    </nav>
+                </div>
+                <!-- end main-nav module -->
+            </div>
+            <!-- end secondary-nav -->
+        				
+        <!--endnoindex-->
+
+        
+        <!-- start main-content -->
+        <div id="main-container">
+
+            <div class="wrapper page">
+                
+                
+                <!-- start breadcrumb module -->
+                                    <section id="breadcrumb" role="navigation" aria-label="Breadcrumb menu">
+                        <ul>
+                            <li>You are here</li>
+                                                        <li>Page Not Found</li>
+                        </ul>
+                                            </section>
+                                    <!-- end breadcrumb module -->
+
+                <!-- start extranet-login module -->
+
+                <!-- end extranet-login module -->
+                <div class="page__container">
+                <main class="page" role="main" id="main">
+
+                    
+                                                                    <h2>Page Not Found</h2>
+
+<div id="content_div_3547">
+
+</div>
+<!-- no related links -->                        
+
+                </main>
+                <!-- /#main -->
+
+                
+                
+                
+                                
+                																		                
+            </div>
+            
+            <!--<a href="#top" class="scroll-to-top icon icon-rsgarrow-up"><span>Back to top of page</span></a>-->
+        </div>
+        <!-- end main-content-->
+                    
+
+        <!--noindex-->
+        <!-- begin footer -->
+            <div id="footer-container">
+                <div id="footer-first-content">
+                    <footer id="footer-first" class="wrapper" role="contentinfo">
+                        														                            <section class="footer-menu">
+                                    <h5>SCSA</h5>
+                                    <ul>
+                                                                                    <li>
+                                                <a href="https://scsa.wa.edu.au/about-us"
+                                                   title="About Us">About Us</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="https://scsa.wa.edu.au/publications"
+                                                   title="Publications">Publications</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="https://scsa.wa.edu.au/sirs-and-srms-info"
+                                                   title="SIRS and SRMS Information">SIRS and SRMS Information</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="https://scsa.wa.edu.au/events"
+                                                   title="Events">Events</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="https://scsa.wa.edu.au/forms"
+                                                   title="Forms">Forms</a>
+                                            </li>
+                                                                                
+                                    </ul>
+                            </section>
+                        				                        <!-- /.footer-menu -->
+                        
+<section class="contact-details" id="contact_details_49590">
+<h5><a href="https://scsa.wa.edu.au/about-us/contact-details">Contact us</a></h5>
+<p>School Curriculum and Standards Authority
+<br>303 Sevenoaks St Cannington
+<br>Western Australia 6107<br />
+Our postal address is:<br />
+PO Box 816 Cannington 6987</p>
+<p><a href="mailto:info@scsa.wa.edu.au">info@scsa.wa.edu.au</a></p>
+</section>
+                    </footer>
+                    <!-- /#footer-first -->
+                </div>
+                <!-- /#footer-first-content -->
+                <div id="footer-second-content" class="wrapper-fullscreen">
+                    <footer id="footer-second" class="wrapper" role="contentinfo">
+                        <section class="gov-link"> <a href="http://www.wa.gov.au">wa.gov.au</a> </section>
+                        
+<section class="copyright" id="copyright_details_49594">
+<ul>
+    <li><a href="https://scsa.wa.edu.au/home">Home</a></li>
+    <li><a href="https://scsa.wa.edu.au/privacy">Privacy</a></li>
+    <li><a href="https://scsa.wa.edu.au/disclaimer">Disclaimer</a></li>
+    <li><a href="https://scsa.wa.edu.au/copyright">Copyright</a></li>
+    <li><a href="https://scsa.wa.edu.au/__data/assets/pdf_file/0005/736394/Public_Interest_Disclosure_Procedures.pdf" target="_blank">Public Interest Disclosure</a></li>
+    <li><a href="https://outlook.office.com">Staff mail</a></li>
+</ul>
+<p>&copy; School Curriculum and Standards Authority, Government of Western Australia, 2014</p>
+
+</section>
+                    </footer>
+                </div>
+            </div>
+        <!-- end footer -->
+        <a href="#top" id="back-top" class="scroll-to-top icon icon-rsgarrow-up"><span>Back to top of page</span></a>
+
+    <!-- /.page-wrapper --></div>
+    <script src="https://scsa.wa.edu.au/__data/assets/js_file/0006/49263/jquery.min.js"></script><!-- jquery.min.js -->
+<script src="https://k10outline.scsa.wa.edu.au/__data/assets/js_file/0017/1862/jquery-accessibleMegaMenu.js"></script><!-- megamenu -->
+<script src="https://scsa.wa.edu.au/__data/assets/js_file/0005/49262/plugins.min.js"></script><!-- plugins.min.js -->
+<script src="https://wace1516.scsa.wa.edu.au/_designs/js/bootstrap.js"></script> <!-- bootstrap.js -->
+<script src="https://scsa.wa.edu.au/_design/js/jquery.funnelback-completion.js"></script><!-- jquery.funnelback-completion.js-->
+<script src="https://scsa.wa.edu.au/__data/assets/js_file/0004/49261/global.js"></script><!-- global.js -->
+<script src="https://scsa.wa.edu.au/__data/assets/js_file/0011/129962/scripts.js"></script><!-- scripts.js -->
+<script src="https://k10outline.scsa.wa.edu.au/_design/js/common_functions.js"></script><!-- common_functions.js -->
+<script src="https://scsa.wa.edu.au/__data/assets/js_file/0003/555114/fadescroll.js"></script><!-- fade and animate scroll on back-top button -->
+<!--<script src="./?a=350787:test.js"></script> git bridge test -->    <!--endnoindex-->
+    <!-- open tab url js- start -->
+    
+    <!-- open tab url js- end -->
+    <script type="text/javascript">
+    window._monsido = window._monsido || {
+        token: "tzLU0NS6oAgjf39-zCfYwA",
+    };
+</script>
+<script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+    
+
+</body>
+</html>
