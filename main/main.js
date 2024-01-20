@@ -312,7 +312,7 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
       localStorage.setItem('review', JSON.stringify(reviewFilePaths));
       localStorage.setItem('write', JSON.stringify(writeFilePaths)); 
       reloadTree();
-      if (path in writeFilePaths){
+      if (currentPath in writeFilePaths){
         textbox.value = writeFilePaths[currentPath];
       } else {
         textbox.value = '';
