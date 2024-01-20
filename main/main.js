@@ -1,4 +1,4 @@
-currentPath = '';
+currentPath = 'data/Demeter Instructions.pdf';
 const readData = localStorage.getItem('read');
 readFilePaths = readData ? JSON.parse(readData) : [];
 const reviewData = localStorage.getItem('review');
@@ -29,17 +29,27 @@ readJSONFile().then((jsonData) => {
 
 function createFileTreeElement(node, depth = 0) {
   const listItem = document.createElement('li');
-  listItem.textContent = node.name;
   listItem.style.marginLeft = `${depth * 10}px`;
+
+  if (/\.(pdf|docx?|txt)/i.test(node.path)) {
+    listItem.style.cursor = "pointer";
+    listItem.textContent = node.name; 
+    listItem.style.color = "#f2f2f2";
+
+  } else {
+    listItem.textContent = node.name + "/"; 
+    listItem.style.color = "#bfbfbf";
+  }
+
   if (readFilePaths.includes(node.path)){
-    listItem.style.color = "#808080";
+    listItem.style.color = "#404040";
   }
   if (reviewFilePaths.includes(node.path)){
     listItem.style.color = "#004fb3";
   }
+
   listItem.addEventListener('click', () => {
     loadFile(node.path);
-      
     event.stopPropagation();
   });
 
@@ -80,10 +90,10 @@ function loadFile(path) {
     document.getElementById("fileh3").innerHTML = path.split('/').pop().replace(".pdf", "").replace(".PDF", "").replace(".docx", "").replace(".doc", "").replace(".txt", "");
     currentPath = path;
   }
-  else {
-    document.getElementById("viewer").children[0].src = ``;
-  }
+
 }
+
+loadFile(currentPath);
 
 function reloadTree() {
   readJSONFile().then((jsonData) => {
@@ -161,7 +171,16 @@ function clearReview() {
   } 
   document.getElementById("reviewclearbox").checked = false;
   document.getElementById("reviewbox").checked = false;
+}
 
+function clearWrite() {
+  if(confirm("Are you sure?\nThis will irreversibly remove any memory of any file notes in the local storage.\n\nPress OK to confirm.")){
+    writeFilePaths = {};
+    localStorage.setItem('write', JSON.stringify(writeFilePaths));
+    reloadTree(); 
+  } 
+  document.getElementById("writeclearbox").checked = false;
+  document.getElementById("notes").value = "";
 }
 
 let countdownInterval;
@@ -257,3 +276,44 @@ function updateCountdown() {
 function padZero(number) {
   return number < 10 ? `0${number}` : number;
 }
+
+function save() {
+  let jsonData = { 
+    read: readFilePaths,
+    review: reviewFilePaths,
+    write: writeFilePaths
+  }
+  const jsonString = JSON.stringify(jsonData, null, 2);
+  const blob = new Blob([jsonString], { type: 'application/json' });
+  const link = document.createElement('a');
+  link.download = 'data.json';
+  link.href = URL.createObjectURL(blob);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+document.getElementById('fileInput').addEventListener('change', function(event) {
+  const fileInput = event.target;
+  
+  if (fileInput.files.length > 0) {
+    const selectedFile = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      const fileContent = e.target.result;
+      let jsonData = JSON.parse(fileContent);
+
+      console.log(jsonData); 
+      readFilePaths = jsonData.read
+      reviewFilePaths = jsonData.review
+      writeFilePaths = jsonData.write
+      localStorage.setItem('read', JSON.stringify(readFilePaths));
+      localStorage.setItem('review', JSON.stringify(reviewFilePaths));
+      localStorage.setItem('write', JSON.stringify(writeFilePaths)); 
+      reloadTree();
+    };
+
+    reader.readAsText(selectedFile);
+  }
+});

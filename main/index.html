@@ -11,8 +11,22 @@
 </head>
 <body>
     <header>
-      <h1>Demeter</h1>
-      <p>Load document files (pdf, docx) in one page, and mark visited files. Uses Google Docs viewer.</p>
+      <div id="title">
+        <img src="favicon.ico" alt="Icon" width="30px" height="30px" id="icon">
+         <h1>Demeter</h1>
+      </div>
+      <div id="description">
+        <p>Load document files (pdf, docx) in one page, and mark visited files. Uses Google Docs viewer.</p>
+
+        <button id="save" onclick="save()" style="margin:15px">Save data as JSON</button>
+
+        <strong style="margin-top:15px">Load JSON file (will overwrite existing data): </strong>
+
+        <form style="margin:15px">
+          <input type="file" id="fileInput" accept=".json">
+        </form>
+
+      </div>
     </header>
     <div id="page">
       <div id="LHS">
@@ -27,6 +41,8 @@
             
             <input type="checkbox" id="reviewbox" onchange="markReview()">
             <label for="reviewbox">Mark for review</label> 
+
+            <br>
             
             <input type="checkbox" id="readclearbox" onchange="clearRead()">
             <label for="readclearbox">Clear read files</label>
@@ -54,12 +70,18 @@
             <button onclick="resetCountdown()">Reset Countdown</button>
           </div>
           <div id="col3">
-           <h3>File notes:</h3>
+            <div id="notesheader">
+              <h3>File notes:</h3>
+              <div style="padding-top:21px">
+                <input type="checkbox" id="writeclearbox" onchange="clearWrite()">
+                <label for="writeclearbox">Clear file notes</label>
+              </div>
+            </div>
             <textarea type="text" id="notes"></textarea>
           </div>
         </div>
         <div id="viewer">
-            <iframe src="" width="100%" height="100%"></iframe>
+          <iframe src="" width="100%" height="100%"></iframe>
         </div>
       </div>
     </div>
