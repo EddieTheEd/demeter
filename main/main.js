@@ -6,6 +6,7 @@ reviewFilePaths = reviewData ? JSON.parse(reviewData) : [];
 const writeData = localStorage.getItem('write');
 writeFilePaths = writeData ? JSON.parse(writeData) : {};
 textbox = document.querySelector('textarea');
+firstTime = true;
 
 async function readJSONFile() {
   try {
@@ -22,7 +23,6 @@ async function readJSONFile() {
 
 reloadTree();
 
-
 function createFileTreeElement(node, depth = 0) {
   const listItem = document.createElement('li');
   listItem.style.marginLeft = `${depth * 10}px`;
@@ -36,6 +36,7 @@ function createFileTreeElement(node, depth = 0) {
   } else {
     listItem.textContent = node.name + "/"; 
     listItem.style.color = "#bfbfbf";
+    listItem.style.cursor = "pointer";
     if (node.path !== "data") {
       listItem.classList.add('closed-folder');
       listItem.style.fontWeight = "normal";
@@ -56,22 +57,6 @@ function createFileTreeElement(node, depth = 0) {
     loadFile(node.path);
     event.stopPropagation();
   });
-/*
-const extensionsPriority = [".pdf", ".docx", ".doc", ".txt"];
-const getFilePriority = (file) => {
-  const extension = file.match("/\.[^/.]+$/");
-  return extensionsPriority.indexOf(extension) !== -1 ? extensionsPriority.indexOf(extension) : Infinity;
-};
-const priorityA = getFilePriority(a);
-const priorityB = getFilePriority(b);
-if (priorityA !== priorityB) {
-  return priorityA - priorityB;
-}
-const nameA = a.replace(/\.[^/.]+$/, "");
-const nameB = b.replace(/\.[^/.]+$/, "");
-return nameA.localeCompare(nameB);
-
- */
 
   if (node.children.length > 0) {
     let children = node.children.slice();
@@ -149,26 +134,51 @@ function reloadTree() {
     }
     const fileTreeElement = createFileTreeElement(jsonData);
     fileSystemDisplay.appendChild(fileTreeElement);
-    const closedFolders = document.querySelectorAll('.closed-folder');
-    closedFolders.forEach((folder) => {
-      const childList = folder.querySelector('ul');
-      if (childList) {
-        childList.style.display = 'none';
-      }
-
-    });
+    if (firstTime) {
+      const closedFolders = document.querySelectorAll('.closed-folder');
+      closedFolders.forEach((folder) => {
+        const childList = folder.querySelector('ul');
+        if (childList) {
+          childList.style.display = 'none';
+        }
+      });
+      firstTime = false;
+    }
   });
+}
+
+function findElementByText(rootElement, searchText) {
+  if (rootElement.textContent.includes(searchText)) {
+    return rootElement;
+  }
+
+  for (let child of rootElement.children) {
+    const foundElement = findElementByText(child, searchText);
+    if (foundElement) {
+      return foundElement;
+    }
+  }
+
+  return null;
 }
 
 function markRead() {
   if (document.getElementById("readbox").checked) {
     readFilePaths.push(currentPath);
     localStorage.setItem('read', JSON.stringify(readFilePaths));
-    reloadTree(); 
+    xpathExpression = `//*[contains(text(), '${currentPath.split('/').pop()}')]`;
+    element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    if (!reviewFilePaths.includes(currentPath)){
+      element.style.color = "#404040";
+    } 
   } else {
     removeFromRead();
     localStorage.setItem('read', JSON.stringify(readFilePaths));
-    reloadTree(); 
+    xpathExpression = `//*[contains(text(), '${currentPath.split('/').pop()}')]`;
+    element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    if (!reviewFilePaths.includes(currentPath)){
+      element.style.color = "#f2f2f2";
+    } 
   }
 }
 
@@ -186,11 +196,19 @@ function markReview() {
   if (document.getElementById("reviewbox").checked) {
     reviewFilePaths.push(currentPath);
     localStorage.setItem('review', JSON.stringify(reviewFilePaths));
-    reloadTree(); 
+    xpathExpression = `//*[contains(text(), '${currentPath.split('/').pop()}')]`;
+    element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    element.style.color = "#004fb3";
   } else {
     removeFromReview();
     localStorage.setItem('review', JSON.stringify(reviewFilePaths));
-    reloadTree(); 
+    xpathExpression = `//*[contains(text(), '${currentPath.split('/').pop()}')]`;
+    element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    if (!readFilePaths.includes(currentPath)){
+      element.style.color = "#f2f2f2";
+    } else {
+      element.style.color = "#404040";
+    }
   }
 }
 
@@ -210,9 +228,14 @@ function removeFromReview() {
 
 function clearRead() {
   if(confirm("Are you sure?\nThis will irreversibly remove any memory of any files marked as read in the local storage.\n\nPress OK to confirm.")){
+    readFilePaths.forEach((path) => {
+      xpathExpression = `//*[contains(text(), '${path.split('/').pop()}')]`;
+      element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      element.style.color = "#f2f2f2";
+    })
     readFilePaths = [];
     localStorage.setItem('read', JSON.stringify(readFilePaths));
-    reloadTree(); 
+    //reloadTree(); 
   } 
   document.getElementById("readclearbox").checked = false;
   document.getElementById("readbox").checked = false;
@@ -221,9 +244,19 @@ function clearRead() {
 
 function clearReview() {
   if(confirm("Are you sure?\nThis will irreversibly remove any memory of any files marked for review in the local storage.\n\nPress OK to confirm.")){
+    reviewFilePaths.forEach((path) => {
+      xpathExpression = `//*[contains(text(), '${path.split('/').pop()}')]`;
+      element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      if (!readFilePaths.includes(currentPath)){
+        element.style.color = "#f2f2f2";
+      } else {
+        element.style.color = "#404040";
+      }
+
+    })
     reviewFilePaths = [];
     localStorage.setItem('review', JSON.stringify(reviewFilePaths));
-    reloadTree(); 
+    //reloadTree(); 
   } 
   document.getElementById("reviewclearbox").checked = false;
   document.getElementById("reviewbox").checked = false;
@@ -233,7 +266,6 @@ function clearWrite() {
   if(confirm("Are you sure?\nThis will irreversibly remove any memory of any file notes in the local storage.\n\nPress OK to confirm.")){
     writeFilePaths = {};
     localStorage.setItem('write', JSON.stringify(writeFilePaths));
-    reloadTree(); 
   } 
   document.getElementById("writeclearbox").checked = false;
   document.getElementById("notes").value = "";
