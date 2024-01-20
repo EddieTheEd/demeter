@@ -247,7 +247,7 @@ function clearReview() {
     reviewFilePaths.forEach((path) => {
       xpathExpression = `//*[contains(text(), '${path.split('/').pop()}')]`;
       element = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-      if (!readFilePaths.includes(currentPath)){
+      if (!readFilePaths.includes(path)){
         element.style.color = "#f2f2f2";
       } else {
         element.style.color = "#404040";
