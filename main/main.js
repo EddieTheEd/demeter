@@ -20,11 +20,7 @@ async function readJSONFile() {
   }
 }
 
-readJSONFile().then((jsonData) => {
-  const fileSystemDisplay = document.getElementById('filetree');
-  const fileTreeElement = createFileTreeElement(jsonData);
-  fileSystemDisplay.appendChild(fileTreeElement);
-});
+reloadTree();
 
 
 function createFileTreeElement(node, depth = 0) {
@@ -35,10 +31,17 @@ function createFileTreeElement(node, depth = 0) {
     listItem.style.cursor = "pointer";
     listItem.textContent = node.name; 
     listItem.style.color = "#f2f2f2";
+    listItem.style.fontWeight = "bold";
 
   } else {
     listItem.textContent = node.name + "/"; 
     listItem.style.color = "#bfbfbf";
+    if (node.path !== "data") {
+      listItem.classList.add('closed-folder');
+      listItem.style.fontWeight = "normal";
+    } else {
+      listItem.style.fontWeight = "bold";
+    }
   }
 
   if (readFilePaths.includes(node.path)){
@@ -49,21 +52,60 @@ function createFileTreeElement(node, depth = 0) {
   }
 
   listItem.addEventListener('click', (event) => {
+    toggleChildVisibility(listItem);
     loadFile(node.path);
     event.stopPropagation();
   });
+/*
+const extensionsPriority = [".pdf", ".docx", ".doc", ".txt"];
+const getFilePriority = (file) => {
+  const extension = file.match("/\.[^/.]+$/");
+  return extensionsPriority.indexOf(extension) !== -1 ? extensionsPriority.indexOf(extension) : Infinity;
+};
+const priorityA = getFilePriority(a);
+const priorityB = getFilePriority(b);
+if (priorityA !== priorityB) {
+  return priorityA - priorityB;
+}
+const nameA = a.replace(/\.[^/.]+$/, "");
+const nameB = b.replace(/\.[^/.]+$/, "");
+return nameA.localeCompare(nameB);
+
+ */
 
   if (node.children.length > 0) {
-    const sortedChildren = node.children.slice().sort((a, b) => a.name.localeCompare(b.name));
+    let children = node.children.slice();
+    let fileChildren = [];
+    let folderChildren = [];
+    children.forEach(child => {
+      if (/\.(pdf|docx?|txt)/i.test(child.name)){
+        fileChildren.push(child);
+      } else {
+        folderChildren.push(child);
+      }
+    });
+    fileChildren.sort((a,b) => a.name.localeCompare(b.name));
+    folderChildren.sort((a,b) => a.name.localeCompare(b.name));
+
+    const sortedChildren = fileChildren.concat(folderChildren);
     const childList = document.createElement('ul');
+    childList.style.fontWeight = "normal";
     sortedChildren.forEach(child => {
       const childElement = createFileTreeElement(child, depth + 1);
       childList.appendChild(childElement);
     });
     listItem.appendChild(childList);
   }
-
   return listItem;
+}
+
+function toggleChildVisibility(parentItem) {
+  const childList = parentItem.querySelector('ul');
+  if (childList) {
+    const isChildVisible = childList.style.display === 'block';
+    childList.style.display = isChildVisible ? 'none' : 'block';
+    parentItem.classList.toggle('closed-folder');
+  }
 }
 
 function loadFile(path) {
@@ -99,9 +141,22 @@ loadFile(currentPath);
 function reloadTree() {
   readJSONFile().then((jsonData) => {
     const fileSystemDisplay = document.getElementById('filetree');
-    fileSystemDisplay.removeChild(fileSystemDisplay.children[0]);
+    try {
+      fileSystemDisplay.removeChild(fileSystemDisplay.children[0]);
+    }
+    catch(err){
+      console.log(err);
+    }
     const fileTreeElement = createFileTreeElement(jsonData);
     fileSystemDisplay.appendChild(fileTreeElement);
+    const closedFolders = document.querySelectorAll('.closed-folder');
+    closedFolders.forEach((folder) => {
+      const childList = folder.querySelector('ul');
+      if (childList) {
+        childList.style.display = 'none';
+      }
+
+    });
   });
 }
 
