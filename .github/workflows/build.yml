@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git config --global http.postBuffer 157286400 #so big files dont kill the workflow
+          git config --global http.postBuffer 524288000 #so big files dont kill the workflow
 
       - name: Build and run Blaze
         run: |
