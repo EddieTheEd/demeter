@@ -312,6 +312,11 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
       localStorage.setItem('review', JSON.stringify(reviewFilePaths));
       localStorage.setItem('write', JSON.stringify(writeFilePaths)); 
       reloadTree();
+      if (path in writeFilePaths){
+        textbox.value = writeFilePaths[path];
+      } else {
+        textbox.value = '';
+      }
     };
 
     reader.readAsText(selectedFile);
