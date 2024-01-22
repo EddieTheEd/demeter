@@ -2,8 +2,9 @@
 name: Broadcast new commit
 
 on:
-  workflow_dispatch:
-
+  push:
+    branches:
+      - main 
 jobs:
   trigger:
     runs-on: ubuntu-latest
