@@ -330,6 +330,7 @@ function addMin() {
 }
 
 function startCountdown() {
+  document.getElementById("elapsed").innerHTML = `` 
   if (!stopped) {
     if (countdownInterval) {
       clearInterval(countdownInterval);
@@ -358,6 +359,7 @@ function startCountdown() {
       if (countdownSeconds <= 0) {
         clearInterval(countdownInterval);
         alert("Countdown finished!");
+        stopCountdown()
       } else {
         countdownSeconds--;
         updateCountdown();
@@ -370,6 +372,12 @@ function stopCountdown() {
   setCountdown = countdownSeconds;
   clearInterval(countdownInterval);
   stopped = true;
+  elapsedTime = duration - countdownSeconds 
+  const hours = Math.floor(elapsedTime / 3600);
+  const minutes = Math.floor((elapsedTime % 3600) / 60);
+  const seconds = elapsedTime % 60;
+  const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+  document.getElementById("elapsed").innerHTML = `Time elapsed: ${formattedTime}` 
 }
 
 function resetCountdown() {
