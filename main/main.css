@@ -126,3 +126,8 @@ li {
 ::-webkit-scrollbar-thumb:hover {
   background: #004fb3;
 }
+
+#elapsedbox {
+  display: flex;
+  align-items: center;
+}

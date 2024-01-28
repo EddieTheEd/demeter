@@ -22,7 +22,7 @@
   <link rel="preload" href="main.css" as="style">
   <link rel="preload" href="main.js" as="script">
   <link rel="stylesheet" href="main.css"/>
-    
+
 </head>
 <body>
     <header>
@@ -53,15 +53,15 @@
             <h3 id="fileh3"></h3>
             <input type="checkbox" id="readbox" onchange="markRead()">
             <label for="readbox">Mark as read</label>
-            
+
             <input type="checkbox" id="reviewbox" onchange="markReview()">
-            <label for="reviewbox">Mark for review</label> 
+            <label for="reviewbox">Mark for review</label>
 
             <br>
-            
+
             <input type="checkbox" id="readclearbox" onchange="clearRead()">
             <label for="readclearbox">Clear read files</label>
-            
+
             <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
             <label for="reviewclearbox">Clear review files</label>
 
@@ -69,7 +69,7 @@
 
             <input type="checkbox" id="openreadbox" onchange="openRead()">
             <label for="openreadbox">Open all read files</label>
-            
+
             <input type="checkbox" id="openreviewbox" onchange="openReview()">
             <label for="openreviewbox">Open all files for review</label>
 
@@ -83,10 +83,13 @@
           </div>
           <div id="col2">
             <h1 id="timer">00:00:00</h1>
-            <h2 id="elapsed"></h2>
+            <div id="elapsedbox">
+              <h2 id="elapsed" style="margin-right: 10px"></h2><img id="copy" src="https://demeter.toomwn.xyz/copy.svg" style="display:inline;" onclick="copy()" height="30px" width="30px"></img>
+            </div>
             <button onclick="addHour()">+1 hour</button>
             <button onclick="addThirty()">+30 minutes</button>
             <button onclick="addTen()">+10 minutes</button>
+            <button onclick="addFive()">+5 minutes</button>
             <button onclick="addMin()">+1 minute</button>
             <br>
             <button onclick="startCountdown(5)">Start Countdown</button>
