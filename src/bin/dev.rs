@@ -95,7 +95,7 @@ fn copy_main_to_output(path: &str) -> io::Result<()> {
 
 fn copy_folder(src: &str) -> io::Result<()> {
     let src_path = std::path::Path::new(src);
-    let dest_path = std::path::Path::new("output").join("data");
+    let dest_path = std::path::Path::new("output").join("testdata");
 
     // Create destination directory
     fs::create_dir_all(&dest_path)?;
