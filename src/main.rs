@@ -146,7 +146,7 @@ fn copy_folder_recursive(src: &std::path::Path, dest: &std::path::Path) -> io::R
 }
 
 fn main() {
-    let data_folder = Path::new("testdata");
+    let data_folder = Path::new("data");
 
     match build_file_structure(&data_folder) {
         Ok(file_structure) => {
