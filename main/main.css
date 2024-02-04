@@ -135,3 +135,23 @@ li {
   display: flex;
   align-items: center;
 }
+
+/* notepad */
+
+#notepad {
+  width: 60vw;
+  height: 60vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} 
+
+#whole {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}

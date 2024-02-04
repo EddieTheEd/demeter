@@ -41,6 +41,9 @@
           <input type="file" id="fileInput" accept=".json">
         </form>
 
+        <img id="copy" src="https://demeter.toomwn.xyz/notepad.svg" style="display:inline;margin:15px;" onclick="togglenotepad()" height="30px" width="30px"></img>
+
+
       </div>
     </header>
     <div id="page">
@@ -110,6 +113,12 @@
           <iframe src="" width="100%" height="100%"></iframe>
         </div>
       </div>
+    </div>
+    <div id="whole" onclick="togglenotepad()">
+      
+    </div>
+    <div id="notepad">
+      <textarea id="notepadbox" style="width: 100%; height: 100%;"></textarea>
     </div>
     <script src="main.js"></script>
 </body>

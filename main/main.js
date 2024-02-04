@@ -5,6 +5,12 @@ const reviewData = localStorage.getItem("review");
 reviewFilePaths = reviewData ? JSON.parse(reviewData) : [];
 const writeData = localStorage.getItem("write");
 writeFilePaths = writeData ? JSON.parse(writeData) : {};
+
+notepadData = localStorage.getItem("notepad");
+document.getElementById("notepadbox").value = notepadData;
+
+notepaddisplayed = true;
+
 textbox = document.querySelector("textarea");
 firstTime = true;
 
@@ -204,6 +210,11 @@ function markRead() {
 textbox.addEventListener("input", function () {
   writeFilePaths[currentPath] = textbox.value;
   localStorage.setItem("write", JSON.stringify(writeFilePaths));
+});
+
+document.getElementById("notepad").addEventListener("input", function () {
+  notepadData = document.getElementById("notepadbox").value;
+  localStorage.setItem("notepad", notepadData);
 });
 
 function download() {
@@ -503,6 +514,7 @@ function save() {
     read: readFilePaths,
     review: reviewFilePaths,
     write: writeFilePaths,
+    notepad: notepadData,
   };
   const jsonString = JSON.stringify(jsonData, null, 2);
   const blob = new Blob([jsonString], { type: "application/json" });
@@ -514,30 +526,61 @@ function save() {
   document.body.removeChild(link);
 }
 
-document
-  .getElementById("fileInput")
-  .addEventListener("change", function (event) {
-    const fileInput = event.target;
+function togglenotepad() {
+  page = document.getElementById("whole");
+  box = document.getElementById("notepad");
+  if(notepaddisplayed) {
+    box.style.display = "none";
+    page.style.backdropFilter = "";
+    page.style.zIndex = "0";
+    page.style.display = "none"
+    notepaddisplayed = false;
 
-    if (fileInput.files.length > 0) {
-      const selectedFile = fileInput.files[0];
-      const reader = new FileReader();
+  } else {
+    box.style.display = "inline";
+    page.style.display = "inline";
+    page.style.backdropFilter = "blur(4px)";
+    page.style.zIndex = "1";
+    box.style.zIndex = "2";
+    notepaddisplayed = true;
+  }
+}
 
-      reader.onload = function (e) {
-        const fileContent = e.target.result;
-        let jsonData = JSON.parse(fileContent);
+togglenotepad()
 
-        console.log(jsonData);
-        readFilePaths = jsonData.read;
-        reviewFilePaths = jsonData.review;
-        writeFilePaths = jsonData.write;
-        localStorage.setItem("read", JSON.stringify(readFilePaths));
-        localStorage.setItem("review", JSON.stringify(reviewFilePaths));
-        localStorage.setItem("write", JSON.stringify(writeFilePaths));
-        reloadTree();
-        loadFile(currentPath);
-      };
+document.body.addEventListener('keydown', function(e) {
+  if (e.key == "Escape") {
+   if(notepaddisplayed){
+     togglenotepad();
+   } 
+  }
+});
 
-      reader.readAsText(selectedFile);
-    }
+document.getElementById("fileInput").addEventListener("change", function (event) {
+  const fileInput = event.target;
+
+  if (fileInput.files.length > 0) {
+    const selectedFile = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const fileContent = e.target.result;
+      let jsonData = JSON.parse(fileContent);
+
+      console.log(jsonData);
+      readFilePaths = jsonData.read;
+      reviewFilePaths = jsonData.review;
+      writeFilePaths = jsonData.write;
+      notepadData = jsonData.notepad;
+      localStorage.setItem("read", JSON.stringify(readFilePaths));
+      localStorage.setItem("review", JSON.stringify(reviewFilePaths));
+      localStorage.setItem("write", JSON.stringify(writeFilePaths));
+      localStorage.setItem("notepad", notepadData);
+      document.getElementById("notepadbox").value = notepadData;
+
+      loadFile(currentPath);
+    };
+
+    reader.readAsText(selectedFile);
+  }
   });
