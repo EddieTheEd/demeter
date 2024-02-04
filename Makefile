@@ -5,6 +5,9 @@ serve: ## Runs Rust file and serves using local server
 	cargo run
 	live-server output --no-browser 
 
+dserve: ## Runs Rust file and serves using local server, but using test data (only change between main.rs and dev.rs should be the folder to search.)
+	cargo run --bin dev
+	live-server output --no-browser
 
 publish: ## Updates Demeter, alongside any other changes you made.
 	@git remote show upstream || (echo "remote 'upstream' not present, setting 'upstream'" && git remote add upstream https://github.com/EddieTheEd/demeter.git)

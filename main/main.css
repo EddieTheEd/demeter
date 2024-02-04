@@ -70,7 +70,7 @@ textarea {
   color: #f2f2f2;
 }
 
-#title, #description, #notesheader {
+#title, #description, #notesheader, #downloaddiv {
   display: flex;
 }
 
@@ -81,6 +81,10 @@ textarea {
 
 #fileh3 {
   word-wrap: break-word;
+  margin-bottom: 1vh;
+  margin-top: 0.75vh;
+  text-decoration: underline;
+  text-decoration-thickness: 2.25px;
 }
 
 /* file tree, list */

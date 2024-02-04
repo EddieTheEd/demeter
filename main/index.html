@@ -59,27 +59,26 @@
 
             <br>
 
-            <input type="checkbox" id="readclearbox" onchange="clearRead()">
-            <label for="readclearbox">Clear read files</label>
-
-            <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
-            <label for="reviewclearbox">Clear review files</label>
-
-            <br>
-
             <input type="checkbox" id="openreadbox" onchange="openRead()">
             <label for="openreadbox">Open all read files</label>
 
             <input type="checkbox" id="openreviewbox" onchange="openReview()">
             <label for="openreviewbox">Open all files for review</label>
 
+            <br>
+
+            <input type="checkbox" id="readclearbox" onchange="clearRead()">
+            <label for="readclearbox">Clear read files</label>
+
+            <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
+            <label for="reviewclearbox">Clear review files</label> 
+
             <br><br>
 
-            <button id="downloadButton" onclick="download()">Open/Download</button>
-
-            <br><br>
-
-            <li id="actualli">Depends on how your browser treats the document file.</li>
+            <div id="downloaddiv">
+              <button id="downloadButton" onclick="download()">Open/Download</button>
+              <li id="actualli">Depends on how your browser treats the document file.</li>
+            </div>
           </div>
           <div id="col2">
             <h1 id="timer">00:00:00</h1>
