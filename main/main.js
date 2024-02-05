@@ -15,7 +15,7 @@ var simplemde = new SimpleMDE({
   toolbar: false,
 });
 
-notepadData = localStorage.getItem("notepad");
+notepadData = localStorage.getItem(notepadData !== null ? notepadData : "");
 
 simplemde.value(notepadData);
 
