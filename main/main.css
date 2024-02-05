@@ -167,3 +167,9 @@ li {
 .CodeMirror-cursor {
   border-color: #f2f2f2 !important;
 }
+
+
+.editor-statusbar {
+    color: #f2f2f2 !important;
+}
+
