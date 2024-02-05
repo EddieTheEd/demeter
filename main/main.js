@@ -6,8 +6,18 @@ reviewFilePaths = reviewData ? JSON.parse(reviewData) : [];
 const writeData = localStorage.getItem("write");
 writeFilePaths = writeData ? JSON.parse(writeData) : {};
 
+var simplemde = new SimpleMDE({
+  element: document.getElementById("notepadbox"),
+  forceSync: true,
+  autosave: {
+    enabled: false,
+  },
+  toolbar: false,
+});
+
 notepadData = localStorage.getItem("notepad");
-document.getElementById("notepadbox").value = notepadData;
+
+simplemde.value(notepadData);
 
 notepaddisplayed = true;
 
@@ -212,8 +222,8 @@ textbox.addEventListener("input", function () {
   localStorage.setItem("write", JSON.stringify(writeFilePaths));
 });
 
-document.getElementById("notepad").addEventListener("input", function () {
-  notepadData = document.getElementById("notepadbox").value;
+simplemde.codemirror.on("change", function(){
+	notepadData = simplemde.value();
   localStorage.setItem("notepad", notepadData);
 });
 
@@ -576,7 +586,7 @@ document.getElementById("fileInput").addEventListener("change", function (event)
       localStorage.setItem("review", JSON.stringify(reviewFilePaths));
       localStorage.setItem("write", JSON.stringify(writeFilePaths));
       localStorage.setItem("notepad", notepadData);
-      document.getElementById("notepadbox").value = notepadData;
+      simplemde.value(notepadData);
 
       loadFile(currentPath);
     };
