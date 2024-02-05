@@ -155,3 +155,15 @@ li {
   left: 0;
   overflow: hidden;
 }
+
+.CodeMirror {
+  height: 50vh !important;
+  background-color: #11121d !important;
+  color: #f2f2f2 !important;
+  border: solid #f2f2f2 3px !important;
+  border-radius: 1.5% !important;
+} 
+
+.CodeMirror-cursor {
+  border-color: #f2f2f2 !important;
+}
