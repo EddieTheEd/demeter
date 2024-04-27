@@ -33,7 +33,7 @@ function narrowData(node, targetPath) {
 
 async function readJSONFile() {
   try {
-    const response = await fetch("https://demeter-data.netlify.app/output.json");
+    const response = await fetch(storageroot + "output.json");
     if (!response.ok) {
       throw new Error("Failed to fetch the JSON file");
     }
