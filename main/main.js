@@ -147,7 +147,7 @@ function loadFile(path) {
     textbox.value = "";
   }
 
-  const absoluteURL =  + "/" + path; //newurl
+  const absoluteURL = storageroot + "/" + path; //newurl
   //window.location.href = absoluteURL;
   if (/\.(pdf|docx?|txt)/i.test(path)) {
     document.getElementById("viewer").children[0].src =
