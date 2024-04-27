@@ -2,7 +2,7 @@ let updateDate = localStorage.getItem("update");
 let updateString = "";
 let allUpdates = "";
 
-fetch('updates.json')
+fetch('main/updates.json')
   .then(response => response.json())
   .then(data => {
     const updates = data.updates;
