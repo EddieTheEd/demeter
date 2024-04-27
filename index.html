@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Demeter</title>
+  <meta name="description" content="Demeter, a study tool using Google Docs viewer.">
+  <link rel="icon" type="image/x-icon" href="https://demeter.toomwn.xyz/main/favicon.ico/">
+
+  <meta property="og:url" content="https://demeter.toomwn.xyz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Demeter">
+  <meta property="og:description" content="Demeter, a study tool using Google Docs viewer.">
+  <meta property="og:image" content="https://demeter.toomwn.xyz/main/favicon.png/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="demeter.toomwn.xyz">
+  <meta property="twitter:url" content="https://demeter.toomwn.xyz">
+  <meta name="twitter:title" content="Demeter">
+  <meta name="twitter:description" content="Demeter, a study tool using Google Docs viewer.">
+  <meta name="twitter:image" content="https://demeter.toomwn.xyz/main/favicon.png/">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="main/main.css" as="style">
+  <link rel="stylesheet" href="main/main.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+</head>
+<body>
+    <header>
+      <div id="title">
+        <img src="main/favicon.ico" alt="Icon" width="30px" height="30px" id="icon">
+         <h1>Demeter</h1>
+      </div>
+      <div id="description">
+        <p>Load document files (pdf, docx) in one page. Uses Google Docs viewer. <a href="https://github.com/EddieTheEd/demeter">See repo here.</a> Inspired by <a href="https://en.wikipedia.org/wiki/Demeter">Demeter</a>, goddess of the harvest. If you wish to have certain files taken down, please email <a href = "mailto: demeter@toomwn.xyz">demeter@toomwn.xyz</a>.</p>
+
+        <button id="updates" onclick="updates()" style="margin:15px">Updates</button>
+
+        <button id="save" onclick="save()" style="margin:15px">Save data as JSON</button>
+
+        <strong style="margin-top:15px">Load JSON file (will overwrite existing data): </strong>
+
+        <form style="margin:15px">
+          <input type="file" id="fileInput" accept=".json">
+        </form>
+
+        <img src="https://demeter.toomwn.xyz/main/notepad.svg" style="display:inline;margin:15px;" onclick="togglenotepad()" height="30px" width="30px"></img>
+
+        <a href="https://simplemde.com/markdown-guide" style="margin: 15px;font-size: 20px;
+          ">?</a>
+      </div>
+    </header>
+    <div id="page">
+      <div id="LHS">
+        <div id="filetree"></div>
+      </div>
+      <div id="RHS">
+        <div id="grid2">
+          <div id="fileheader">
+            <h3 id="fileh3"></h3>
+            <input type="checkbox" id="opendownloadbox" onchange="openDownload()">
+            <label for="opendownloadbox">Open/Download</label>
+
+            <br>
+
+            <input type="checkbox" id="readbox" onchange="markRead()">
+            <label for="readbox">Mark as read</label>
+
+            <input type="checkbox" id="reviewbox" onchange="markReview()">
+            <label for="reviewbox">Mark for review</label>
+
+            <br>
+
+            <input type="checkbox" id="openreadbox" onchange="openRead()">
+            <label for="openreadbox">Open all read files</label>
+
+            <input type="checkbox" id="openreviewbox" onchange="openReview()">
+            <label for="openreviewbox">Open all files for review</label>
+
+            <br>
+
+            <input type="checkbox" id="readclearbox" onchange="clearRead()">
+            <label for="readclearbox">Clear read files</label>
+
+            <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
+            <label for="reviewclearbox">Clear review files</label> 
+
+            <br><br>
+          </div>
+          <div id="col2">
+            <h1 id="timer">00:00:00</h1>
+            <div id="elapsedbox">
+              <h2 id="elapsed" style="margin-right: 10px"></h2>
+              <img id="copy" src="https://demeter.toomwn.xyz/main/copy.svg" onclick="copy()"></img>
+            </div>
+            <button onclick="addHour()">1h</button>
+            <button onclick="addThirty()">30m</button>
+            <button onclick="addTen()">10m</button>
+            <button onclick="addFive()">5m</button>
+            <button onclick="addMin()">1m</button>
+            <button onclick="addFifty()">50m</button>
+            <button onclick="addHundred()">100m</button> 
+            <br>
+            <button onclick="startCountdown()">Start</button>
+            <button onclick="stopCountdown()">Stop</button>
+            <button onclick="resetCountdown()">Reset</button>
+          </div>
+          <div id="col3">
+            <div id="notesheader">
+              <h3>File notes:</h3>
+              <div style="padding-top:21px">
+                <input type="checkbox" id="writeclearbox" onchange="clearWrite()">
+                <label for="writeclearbox">Clear file notes</label>
+              </div>
+            </div>
+            <textarea type="text" id="notes"></textarea>
+          </div>
+        </div>
+        <div id="viewer">
+          <iframe src="" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+    </div>
+    <div id="whole" onclick="togglenotepad()">
+    </div>
+    
+    <div id="notepad">
+      <textarea id="notepadbox" style="width: 100%; height: 100%;"></textarea>
+    </div>
+   
+    <script src="main/update.js"></script>
+    <script src="main/clock.js"></script>
+    <script src="main/notepad.js"></script>
+    <script src="main/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "updates": [
+    {
+      "date": "15/04/2024",
+      "description": "Added a 'go back' button when you focus on folders, returning to the last focus you were on, NOT the folder above."
+    },
+    {
+      "date": "13/04/2024",
+      "description": "Really embarrassing bug with the copy button for the clock fixed. Also improved clock visuals."
+    },
+    {
+      "date": "12/04/2024",
+      "description": "Small visual improvements, rearranged the scripts, and modified the instructions document."
+    },
+    {
+      "date": "11/04/2024 (again)",
+      "description": "Fixed a bug with focusing folders, because read/review files that were not in focus did not exist, it threw an error and stopped all read/review files being opened."
+    },
+    {
+      "date": "11/04/2024",
+      "description": "Added small d's requested stuffs. Added literature folder."
+    },
+    {
+      "date": "10/04/2024",
+      "description": "Added focusing folders, and added this updates feature, showing a popup when a new update is made."
+    },
+    {
+      "date": "09/04/2024",
+      "description": "Modified code to make focusing on folders possible, but did not implement yet."
+    }
+  ]
+}
