@@ -401,7 +401,6 @@ function openReview() {
       console.log(err);
     }
   });
-  document.getElementById("openreviewbox").checked = false;
 }
 
 function openDownload() {
