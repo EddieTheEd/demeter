@@ -321,7 +321,6 @@ function clearRead() {
     localStorage.setItem("read", JSON.stringify(readFilePaths));
     //reloadTree();
   }
-  document.getElementById("readclearbox").checked = false;
   document.getElementById("readbox").checked = false;
 }
 
@@ -350,7 +349,6 @@ function clearReview() {
     localStorage.setItem("review", JSON.stringify(reviewFilePaths));
     //reloadTree();
   }
-  document.getElementById("reviewclearbox").checked = false;
   document.getElementById("reviewbox").checked = false;
 }
 
@@ -384,7 +382,6 @@ function openRead() {
       console.log(err);
     }
   });
-  document.getElementById("openreadbox").checked = false;
 }
 
 function openReview() {

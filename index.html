@@ -59,9 +59,7 @@
         <div id="grid2">
           <div id="fileheader">
             <h3 id="fileh3"></h3>
-            <input type="checkbox" id="opendownloadbox" onchange="openDownload()">
-            <label for="opendownloadbox">Open/Download</label>
-
+            <button id="opendownloadbox" onclick="openDownload()">Open/Download</button>
             <br>
 
             <input type="checkbox" id="readbox" onchange="markRead()">
@@ -80,11 +78,9 @@
 
             <br>
 
-            <input type="checkbox" id="readclearbox" onchange="clearRead()">
-            <label for="readclearbox">Clear read files</label>
+            <button id="readclearbox" onclick="clearRead()">Clear read files</button>
 
-            <input type="checkbox" id="reviewclearbox" onchange="clearReview()">
-            <label for="reviewclearbox">Clear review files</label> 
+            <button id="reviewclearbox" onclick="clearReview()">Clear review files</button>
 
             <br><br>
           </div>
