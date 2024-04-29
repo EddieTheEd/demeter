@@ -2,7 +2,7 @@
   "updates": [
     {
       "date": "27/04/2024",
-      "description": "Migrated the stored files to a different repository, to make the website easier to deploy. This may lead to issues when accessing file, please message me any problems you find! :)"
+      "description": "Migrated the stored files to a different repository, to make the website easier to deploy. This may lead to issues when accessing files, please message me any problems you find! :)"
     },
     {
       "date": "15/04/2024",
