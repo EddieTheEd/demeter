@@ -50,7 +50,7 @@ function openPopup(content) {
 
   if (popupWindow) {
     const cssLink = popupWindow.document.createElement("link");
-    cssLink.href = "main.css";
+    cssLink.href = "main/main.css";
     cssLink.rel = "stylesheet";
     popupWindow.document.head.appendChild(cssLink);
     popupWindow.document.body.innerHTML = content;
