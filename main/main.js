@@ -16,7 +16,7 @@ storageroot = "https://demeter-data.netlify.app/"
 const pathhistorydata = localStorage.getItem("history");
 pathhistory = pathhistorydata ? JSON.parse(pathhistorydata) : [root];
 
-if (pathhistory !=== [root]) {
+if (pathhistory !== [root]) {
   root = pathhistory[pathhistory.length - 1];
 ]
 
