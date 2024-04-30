@@ -177,7 +177,7 @@ function reloadTree() {
     } catch (err) {
       console.log(err);
     }
-    const fileTreeElement = createFileTreeElement(narrowData(jsonData, root));
+    const fileTreeElement = createFileTreeElement(narrowData(jsonData, pathhistory[pathhistory.length - 1]));
     fileSystemDisplay.appendChild(fileTreeElement);
     const closedFolders = document.querySelectorAll(".closed-folder");
     closedFolders.forEach((folder) => {
