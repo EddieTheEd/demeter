@@ -11,14 +11,14 @@ textbox = document.querySelector("textarea");
 root = "data";
 currentPath = root + "/Demeter Instructions.docx";
 
-storageroot = "https://demeter-data.netlify.app/"
+storageroot = "https://demeter-data.netlify.app/";
 
 const pathhistorydata = localStorage.getItem("history");
 pathhistory = pathhistorydata ? JSON.parse(pathhistorydata) : [root];
 
 if (pathhistory !== [root]) {
   root = pathhistory[pathhistory.length - 1];
-]
+}
 
 // takes in main data, and path of a directory. Then returns the object corresponding to that path, to be used to generate the filetree.
 function narrowData(node, targetPath) {
