@@ -16,6 +16,10 @@ storageroot = "https://demeter-data.netlify.app/"
 const pathhistorydata = localStorage.getItem("history");
 pathhistory = pathhistorydata ? JSON.parse(pathhistorydata) : [root];
 
+if !(pathhistory === [root]) {
+  root = pathhistory[pathhistory.length - 1];
+]
+
 // takes in main data, and path of a directory. Then returns the object corresponding to that path, to be used to generate the filetree.
 function narrowData(node, targetPath) {
     if (node.path === targetPath) {
@@ -177,7 +181,7 @@ function reloadTree() {
     } catch (err) {
       console.log(err);
     }
-    const fileTreeElement = createFileTreeElement(narrowData(jsonData, pathhistory[pathhistory.length - 1]));
+    const fileTreeElement = createFileTreeElement(narrowData(jsonData, root));
     fileSystemDisplay.appendChild(fileTreeElement);
     const closedFolders = document.querySelectorAll(".closed-folder");
     closedFolders.forEach((folder) => {
