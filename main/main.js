@@ -13,7 +13,8 @@ currentPath = root + "/Demeter Instructions.docx";
 
 storageroot = "https://demeter-data.netlify.app/"
 
-pathhistory = [root]
+const pathhistorydata = localStorage.getItem("history");
+pathhistory = pathhistorydata ? JSON.parse(pathhistorydata) : [root];
 
 // takes in main data, and path of a directory. Then returns the object corresponding to that path, to be used to generate the filetree.
 function narrowData(node, targetPath) {
@@ -198,6 +199,7 @@ function reloadTree() {
     fileTreeElement.appendChild(backButton);
     fileTreeElement.children[1].parentNode.insertBefore(fileTreeElement.children[1], fileTreeElement.children[0]);
   });
+  localStorage.setItem("history", JSON.stringify(pathhistory));
 }
 
 reloadTree();
