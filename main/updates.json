@@ -1,6 +1,10 @@
 {
   "updates": [
     {
+      "date": "30/04/2024",
+      "description": "Path history is now saved, for your convenience. I won't have it saved in the main .json file since its kind of pointless to do that. Sorry for the incredibly miniscule inconvenience this may cause."
+    },
+    {
       "date": "27/04/2024",
       "description": "Migrated the stored files to a different repository, to make the website easier to deploy. This may lead to issues when accessing files, please message me any problems you find! :)"
     },
