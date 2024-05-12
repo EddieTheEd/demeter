@@ -1,6 +1,10 @@
 {
   "updates": [
     {
+      "date": "12/05/2024",
+      "description": "Added a forum so you can leave your suggestions!"
+    },
+    {
       "date": "30/04/2024",
       "description": "Path history is now saved, for your convenience. I won't have it saved in the main .json file since its kind of pointless to do that. Sorry for the incredibly miniscule inconvenience this may cause."
     },
