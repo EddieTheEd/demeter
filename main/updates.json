@@ -1,6 +1,10 @@
 {
   "updates": [
     {
+      "date": "18/05/2024",
+      "description": "Added an email button in case you'd rather email your data then download it."
+    },
+    {
       "date": "12/05/2024",
       "description": "Added a forum so you can leave your suggestions!"
     },
